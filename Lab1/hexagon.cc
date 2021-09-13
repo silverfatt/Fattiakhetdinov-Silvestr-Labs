@@ -16,7 +16,7 @@ double Hexagon::Area(){
     return s;
 } 
 size_t Hexagon::VertexesNumber(){
-    return 4;
+    return 6;
 }
 Hexagon::~Hexagon() {
     std::cout << "Hexagon deleted" << std::endl;
