@@ -16,7 +16,7 @@ double Pentagon::Area(){
     return s;
 } 
 size_t Pentagon::VertexesNumber(){
-    return 4;
+    return 5;
 }
 Pentagon::~Pentagon() {
     std::cout << "Pentagon deleted" << std::endl;
