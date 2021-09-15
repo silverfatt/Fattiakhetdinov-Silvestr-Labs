@@ -1,0 +1,15 @@
+{
+  "variant": 4,
+  "figures": [
+    "Rhombus",
+    "Pentagon",
+    "Hexagon"
+  ],
+  "containers": [
+    "TNaryTree",
+    "TBinaryTree"
+  ],
+  "finished_labs": {
+    "lab1": "silverfatt/Fattiakhetdinov-Silvestr-labs/Lab1",
+  }
+}
