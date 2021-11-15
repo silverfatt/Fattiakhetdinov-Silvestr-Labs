@@ -13,8 +13,6 @@ class TIterator {
 
   // std::shared_ptr<T> operator->() { return node_ptr->GetValue(); }
 
-  void operator++() { node_ptr = node_ptr->GetNext(); }
-
   void GoToSon(){ //переход к сыну, если он есть
     if (node_ptr->son == nullptr){
       std::cout << "Node does not exist" << std::endl;
