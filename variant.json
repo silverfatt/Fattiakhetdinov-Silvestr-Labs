@@ -1,5 +1,5 @@
 {
-  "variant": 4,
+  "variant": 21,
   "figures": [
     "Rhombus",
     "Pentagon",
@@ -16,4 +16,7 @@
     "lab4:5": "Lab4"
     "lab5:5": "Lab5"
   }
+  "reports": [
+    "lab1"
+  ]
 }
