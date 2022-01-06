@@ -17,8 +17,16 @@
     "lab3:5": "Lab3"
     "lab4:5": "Lab4"
     "lab5:5": "Lab5"
+    "lab6:5": "Lab6"
   }
   "reports": [
+    "lab0.1"
+    "lab0.2"
     "lab1"
+    "lab2"
+    "lab3"
+    "lab4"
+    "lab5"
+    "lab6"
   ]
 }
