@@ -9,6 +9,7 @@ class TnaryTreeItem {
   TnaryTreeItem(Rhombus& rhombus);
   TnaryTreeItem* son;
   TnaryTreeItem* brother;
+  virtual ~TnaryTreeItem();
   Rhombus rhombus;
 };
 
