@@ -2,12 +2,13 @@
 #include "rhombus.h"
 #include <iostream>
 
-TnaryTreeItem::TnaryTreeItem(Rhombus& r) {
+TnaryTreeItem::TnaryTreeItem(Rhombus &r)
+{
   this->rhombus = r;
   this->son = nullptr;
   this->brother = nullptr;
   std::cout << "Ntree item: created" << std::endl;
 }
-TNaryTreeItem::~TNaryTreeItem()
+TnaryTreeItem::~TnaryTreeItem()
 {
 }
