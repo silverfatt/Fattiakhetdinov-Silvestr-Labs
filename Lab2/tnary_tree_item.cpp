@@ -8,3 +8,6 @@ TnaryTreeItem::TnaryTreeItem(Rhombus& r) {
   this->brother = nullptr;
   std::cout << "Ntree item: created" << std::endl;
 }
+TNaryTreeItem::~TNaryTreeItem()
+{
+}
