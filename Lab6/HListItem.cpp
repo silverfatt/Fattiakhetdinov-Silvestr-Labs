@@ -2,15 +2,15 @@
 #include "HListItem.h"
 
 template <class T>
-HListItem<T>::HListItem(const std::shared_ptr<Pentagon> &pentagon)
+HListItem<T>::HListItem(const std::shared_ptr<Rhombus> &rhombus)
 {
-    this->pentagon = pentagon;
+    this->rhombus = rhombus;
     this->next = nullptr;
 }
 template <class A>
 std::ostream &operator<<(std::ostream &os, HListItem<A> &obj)
 {
-    os << "[" << obj.pentagon << "]" << std::endl;
+    os << "[" << obj.rhombus << "]" << std::endl;
     return os;
 }
 template <class T>

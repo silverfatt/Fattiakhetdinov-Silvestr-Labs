@@ -1,7 +1,7 @@
 #ifndef TALLOCATORBLOCK_H
 #define TALLOCATORBLOCK_H
 
-#include "tnary_tree.h"
+#include "TLinkedList.h"
 #include <memory>
 
 class TAllocatorBlock
@@ -67,8 +67,8 @@ public:
 
 private:
     size_t size;
-    TNaryTree<void *> used_blocks;
-    TNaryTree<void *> unused_blocks;
+    TLinkedList<void *> used_blocks;
+    TLinkedList<void *> unused_blocks;
 };
 
 #endif

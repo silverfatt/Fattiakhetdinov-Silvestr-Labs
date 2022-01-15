@@ -7,7 +7,7 @@ TLinkedList<T>::TLinkedList()
     size_of_list = 0;
     std::shared_ptr<HListItem<T>> front;
     std::shared_ptr<HListItem<T>> back;
-    std::cout << "Pentagon List created" << std::endl;
+    std::cout << "rhombus List created" << std::endl;
 }
 template <class T>
 TLinkedList<T>::TLinkedList(const std::shared_ptr<TLinkedList> &other)
@@ -26,7 +26,7 @@ bool TLinkedList<T>::Empty()
     return size_of_list;
 }
 template <class T>
-std::shared_ptr<Pentagon> &TLinkedList<T>::GetItem(size_t idx)
+std::shared_ptr<Rhombus> &TLinkedList<T>::GetItem(size_t idx)
 {
     int k = 0;
     std::shared_ptr<HListItem<T>> obj = front;
@@ -35,22 +35,22 @@ std::shared_ptr<Pentagon> &TLinkedList<T>::GetItem(size_t idx)
         k++;
         obj = obj->next;
     }
-    return obj->pentagon;
+    return obj->rhombus;
 }
 template <class T>
-std::shared_ptr<Pentagon> &TLinkedList<T>::First()
+std::shared_ptr<Rhombus> &TLinkedList<T>::First()
 {
-    return front->pentagon;
+    return front->rhombus;
 }
 template <class T>
-std::shared_ptr<Pentagon> &TLinkedList<T>::Last()
+std::shared_ptr<Rhombus> &TLinkedList<T>::Last()
 {
-    return back->pentagon;
+    return back->rhombus;
 }
 template <class T>
-void TLinkedList<T>::InsertLast(const std::shared_ptr<Pentagon> &&pentagon)
+void TLinkedList<T>::InsertLast(const std::shared_ptr<Rhombus> &&rhombus)
 {
-    std::shared_ptr<HListItem<T>> obj(new HListItem<T>(pentagon));
+    std::shared_ptr<HListItem<T>> obj(new HListItem<T>(Rhombus));
     if (size_of_list == 0)
     {
         front = obj;
@@ -68,7 +68,7 @@ void TLinkedList<T>::RemoveLast()
 {
     if (size_of_list == 0)
     {
-        std::cout << "Pentagon does not pop_back, because the Pentagon List is empty" << std::endl;
+        std::cout << "rhombus does not pop_back, because the rhombus List is empty" << std::endl;
     }
     else
     {
@@ -89,9 +89,9 @@ void TLinkedList<T>::RemoveLast()
     }
 }
 template <class T>
-void TLinkedList<T>::InsertFirst(const std::shared_ptr<Pentagon> &&pentagon)
+void TLinkedList<T>::InsertFirst(const std::shared_ptr<Rhombus> &&rhombus)
 {
-    std::shared_ptr<HListItem<T>> obj(new HListItem<T>(pentagon));
+    std::shared_ptr<HListItem<T>> obj(new HListItem<T>(rhombus));
     if (size_of_list == 0)
     {
         front = obj;
@@ -109,7 +109,7 @@ void TLinkedList<T>::RemoveFirst()
 {
     if (size_of_list == 0)
     {
-        std::cout << "Pentagon does not pop_front, because the Pentagon List is empty" << std::endl;
+        std::cout << "rhombus does not pop_front, because the rhombus List is empty" << std::endl;
     }
     else
     {
@@ -119,7 +119,7 @@ void TLinkedList<T>::RemoveFirst()
     }
 }
 template <class T>
-void TLinkedList<T>::Insert(const std::shared_ptr<Pentagon> &&pentagon, size_t position)
+void TLinkedList<T>::Insert(const std::shared_ptr<Rhombus> &&rhombus, size_t position)
 {
     if (position < 0)
     {
@@ -131,7 +131,7 @@ void TLinkedList<T>::Insert(const std::shared_ptr<Pentagon> &&pentagon, size_t p
     }
     else
     {
-        std::shared_ptr<HListItem<T>> obj(new HListItem<T>(pentagon));
+        std::shared_ptr<HListItem<T>> obj(new HListItem<T>(rhombus));
         if (position == 0)
         {
             front = obj;
@@ -215,24 +215,24 @@ std::ostream &operator<<(std::ostream &os, TLinkedList<T> &hl)
 {
     if (hl.size_of_list == 0)
     {
-        os << "The pentagon list is empty, so there is nothing to output" << std::endl;
+        os << "The rhombus list is empty, so there is nothing to output" << std::endl;
     }
     else
     {
-        os << "Print Pentagon List" << std::endl;
+        os << "Print rhombus List" << std::endl;
         std::shared_ptr<HListItem<T>> obj = hl.front;
         while (obj != nullptr)
         {
             if (obj->next != nullptr)
             {
-                os << obj->pentagon << " "
+                os << obj->rhombus << " "
                    << ","
                    << " ";
                 obj = obj->next;
             }
             else
             {
-                os << obj->pentagon;
+                os << obj->rhombus;
                 obj = obj->next;
             }
         }
@@ -253,6 +253,6 @@ TLinkedList<T>::~TLinkedList()
             del = del->next;
         }
         size_of_list = 0;
-        std::cout << "Pentagon List deleted" << std::endl;
+        std::cout << "rhombus List deleted" << std::endl;
     }
 }
