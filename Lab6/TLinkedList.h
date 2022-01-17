@@ -32,5 +32,4 @@ private:
     std::shared_ptr<HListItem<T>> front;
     std::shared_ptr<HListItem<T>> back;
 };
-#include "TLinkedList.cpp"
 #endif

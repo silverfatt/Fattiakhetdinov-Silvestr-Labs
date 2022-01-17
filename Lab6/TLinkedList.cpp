@@ -50,7 +50,7 @@ std::shared_ptr<Rhombus> &TLinkedList<T>::Last()
 template <class T>
 void TLinkedList<T>::InsertLast(const std::shared_ptr<Rhombus> &&rhombus)
 {
-    std::shared_ptr<HListItem<T>> obj(new HListItem<T>(Rhombus));
+    std::shared_ptr<HListItem<T>> obj(new HListItem<T>(rhombus));
     if (size_of_list == 0)
     {
         front = obj;
@@ -178,7 +178,7 @@ void TLinkedList<T>::Remove(size_t position)
             std::shared_ptr<HListItem<T>> prev_erase = front;
             std::shared_ptr<HListItem<T>> next_erase;
             std::shared_ptr<HListItem<T>> del;
-            F while (k + 1 != position)
+            while (k + 1 != position)
             {
                 k++;
                 prev_erase = prev_erase->next;
